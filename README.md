@@ -1,1 +1,2 @@
-# licithub_entrega_final
+# Como Usar Nosso Site
+## Instruções para o Professor Sérgio.
