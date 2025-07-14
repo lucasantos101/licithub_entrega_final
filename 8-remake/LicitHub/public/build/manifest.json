@@ -1,0 +1,74 @@
+{
+  "resources/css/admin.css": {
+    "file": "assets/admin-CcBxkR7f.css",
+    "src": "resources/css/admin.css",
+    "isEntry": true
+  },
+  "resources/css/app.css": {
+    "file": "assets/app-GyPLLVd8.css",
+    "src": "resources/css/app.css",
+    "isEntry": true
+  },
+  "resources/css/cadastro.css": {
+    "file": "assets/cadastro-CSj8FqUd.css",
+    "src": "resources/css/cadastro.css",
+    "isEntry": true
+  },
+  "resources/css/esqueceu.css": {
+    "file": "assets/esqueceu-0Y5L3Dbi.css",
+    "src": "resources/css/esqueceu.css",
+    "isEntry": true
+  },
+  "resources/css/login.css": {
+    "file": "assets/login-CFD996w4.css",
+    "src": "resources/css/login.css",
+    "isEntry": true
+  },
+  "resources/css/welcome.css": {
+    "file": "assets/welcome-BbhNyjqg.css",
+    "src": "resources/css/welcome.css",
+    "isEntry": true
+  },
+  "resources/icons/eye-close-up.png": {
+    "file": "assets/eye-close-up-caYuLXmm.png",
+    "src": "resources/icons/eye-close-up.png"
+  },
+  "resources/icons/eye.png": {
+    "file": "assets/eye-DNxCdkKQ.png",
+    "src": "resources/icons/eye.png"
+  },
+  "resources/icons/fundao3.png": {
+    "file": "assets/fundao3-CMv7akPl.png",
+    "src": "resources/icons/fundao3.png"
+  },
+  "resources/js/admin.js": {
+    "file": "assets/admin-CCIHRu4B.js",
+    "name": "admin",
+    "src": "resources/js/admin.js",
+    "isEntry": true
+  },
+  "resources/js/app.js": {
+    "file": "assets/app-DVvHzc-p.js",
+    "name": "app",
+    "src": "resources/js/app.js",
+    "isEntry": true
+  },
+  "resources/js/cadastro.js": {
+    "file": "assets/cadastro-DO5NqhO9.js",
+    "name": "cadastro",
+    "src": "resources/js/cadastro.js",
+    "isEntry": true
+  },
+  "resources/js/login.js": {
+    "file": "assets/login-B8IxPz5Z.js",
+    "name": "login",
+    "src": "resources/js/login.js",
+    "isEntry": true
+  },
+  "resources/js/welcome.js": {
+    "file": "assets/welcome-DzQiup_x.js",
+    "name": "welcome",
+    "src": "resources/js/welcome.js",
+    "isEntry": true
+  }
+}

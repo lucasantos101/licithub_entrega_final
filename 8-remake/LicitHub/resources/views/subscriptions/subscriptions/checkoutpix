@@ -1,0 +1,45 @@
+@extends('layouts.app')
+
+@section('content')
+<div class="container text-center">
+    <h2>Pagamento via PIX</h2>
+    <p><strong>Plano:</strong> {{ $plan->name }}</p>
+    <p><strong>Valor:</strong> R$ {{ number_format($plan->price, 2, ',', '.') }}</p>
+    
+    <div id="payment-status" class="alert alert-info">
+        Gerando QR Code...
+    </div>
+
+    <div id="pix-instructions" style="display: none;">
+        <img id="qr-code" src="" alt="QR Code PIX" style="max-width: 300px;">
+        <p><strong>Copia e Cola PIX:</strong></p>
+        <textarea id="pix-code" class="form-control" readonly></textarea>
+    </div>
+</div>
+
+@push('scripts')
+<script src="https://js.stripe.com/v3/"></script>
+<script>
+    const stripe = Stripe('{{ $stripeKey }}');
+
+    // Recupera o PaymentIntent usando seu client_secret
+    stripe.retrievePaymentIntent('{{ $intent->client_secret }}').then(function(result) {
+        const paymentIntent = result.paymentIntent;
+
+        if (paymentIntent && paymentIntent.next_action && paymentIntent.next_action.display_pix_qr_code) {
+            const pix = paymentIntent.next_action.display_pix_qr_code;
+
+            document.getElementById('qr-code').src = pix.image_url_png;
+            document.getElementById('pix-code').textContent = pix.pix_copy_and_paste;
+
+            document.getElementById('pix-instructions').style.display = 'block';
+            document.getElementById('payment-status').classList.replace('alert-info', 'alert-success');
+            document.getElementById('payment-status').textContent = 'Use o QR Code abaixo para pagar com Pix.';
+        } else {
+            document.getElementById('payment-status').classList.replace('alert-info', 'alert-danger');
+            document.getElementById('payment-status').textContent = 'Erro ao gerar o QR Code do Pix.';
+        }
+    });
+</script>
+@endpush
+@endsection
